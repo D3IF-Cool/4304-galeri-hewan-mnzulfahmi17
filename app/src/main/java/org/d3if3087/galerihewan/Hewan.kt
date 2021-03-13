@@ -6,4 +6,3 @@ data class Hewan(
     val imageResId: Int,
     val jenis: String
 )
-
