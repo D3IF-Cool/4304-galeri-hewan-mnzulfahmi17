@@ -1,23 +1,23 @@
-package org.d3if3087.galerihewan
+package org.d3if3087.galerihewan.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import org.d3if3087.galerihewan.model.Hewan
 import org.d3if3087.galerihewan.databinding.ListItemBinding
 
 class MainAdapter(private val data: List<Hewan>) :
 
-    RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+        RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
 
     class ViewHolder(private val binding: ListItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+            RecyclerView.ViewHolder(binding.root) {
 
         fun bind(hewan: Hewan)= with(binding) {
             namaTextView.text = hewan.nama
             latinTextView.text = hewan.namaLatin
             imageView.setImageResource(hewan.imageResId)
-            jenisTextView.text = hewan.jenis
         }
     }
 
